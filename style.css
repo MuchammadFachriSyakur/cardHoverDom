@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card{
+  height: 250px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: white;
+  background-image: url('bg.jpeg');
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 15px rgb(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 50px auto;
+  filter: grayscale(100%);
+}
+.card.filter{
+  filter: grayscale(0);
+}
+.card p{
+  font-size: 25px;
+  background-color: white;
+  color: black;
+  display: none;
+  transition: 1s;
+}
+.card p.pAktif{
+  display: block;
+  transition: 1s ease-in-out;
+  animation-name: card;
+  animation-duration: 1s;
+}
+.card button{
+  height: 35px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  border: 1px solid aqua;
+  background-color: aqua;
+  font-size: 15px;
+  color: black;
+  display: none;
+  transition: 1s;
+}
+.card button.bAktif{
+  display: block;
+  transition: 1.5s ease-in-out;
+  animation-name: card;
+  animation-duration: 1s;
+}
+@keyframes card{
+  from{
+    transform: scale(0);
+    transform: translateY(30px);
+  }
+  to{
+    transform: scale(1);
+    transform: translateX(0);
+  }
+}
